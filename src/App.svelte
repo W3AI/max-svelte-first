@@ -1,5 +1,6 @@
 <script>
-	export let name;
+    export let name;
+    export let myName;
 </script>
 
 <style>
@@ -8,4 +9,4 @@
 	}
 </style>
 
-<h1>Hello {name}!</h1>
+<h1>Servus {name}, I am {myName}!</h1>
