@@ -3,9 +3,9 @@
 
     let name = 'Steve';
     let age = 36;
-    let title = 'innovator';
+    let title = '3ai innovator';
     let image = "";
-    let description = 'codes new cool stuff';
+    let description = 'smart web coder';
 
     // let uppercaseName; not required
 
