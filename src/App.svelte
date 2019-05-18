@@ -52,5 +52,5 @@
 <ContactCard 
     userName="{name}" 
     jobTitle="{title}" 
-    description="{description}"
+    {description}
     userImage="{image}" />
