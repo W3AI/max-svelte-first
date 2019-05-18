@@ -1,6 +1,6 @@
 <script>
     let name = 'Steve';
-    let age = 30;
+    let age = 50;
 </script>
 
 <style>
