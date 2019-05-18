@@ -1,6 +1,10 @@
 <script>
     let name = 'Steve';
     let age = 50;
+
+    function incrementAge() {
+        age += 1;
+    }
 </script>
 
 <style>
