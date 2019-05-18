@@ -12,6 +12,10 @@
     function incrementAge() {
         age += 1;
     }
+
+    function changeName() {
+        name = 'Stefan';
+    }
 </script>
 
 <style>
@@ -22,3 +26,4 @@
 
 <h1>Servus {uppercaseName}, my age is {age}!</h1>
 <button on:click="{incrementAge}">Change Age</button>
+<button>Change Name</button>
