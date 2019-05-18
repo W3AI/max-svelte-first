@@ -13,5 +13,5 @@
 	}
 </style>
 
-<h1>Servus {name.toUpperCase()}, my age is {age + 1}!</h1>
+<h1>Servus {name}, my age is {age + 1}!</h1>
 <button on:click="{incrementAge}">Change Age</button>
