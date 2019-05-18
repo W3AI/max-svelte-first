@@ -32,4 +32,5 @@
 
 <h1>Servus {uppercaseName}, my age is {age}!</h1>
 <button on:click="{incrementAge}">Change Age</button>
-<button on:click="{changeName}">Change Name</button>
+<!-- <button on:click="{changeName}">Change Name</button> -->
+<input type="text" value="{name}">
