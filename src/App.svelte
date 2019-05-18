@@ -1,6 +1,6 @@
 <script>
-    export let name;
-    export let myName;
+    let name = 'Steve';
+    let age = 30;
 </script>
 
 <style>
@@ -9,4 +9,4 @@
 	}
 </style>
 
-<h1>Servus {name}, I am {myName}!</h1>
+<h1>Servus {name}, my age is {age}!</h1>
