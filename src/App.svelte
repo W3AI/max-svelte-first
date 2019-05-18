@@ -9,6 +9,8 @@
     // svelte will recalculate var after $: whenever params change
     $: uppercaseName = name.toUpperCase();
 
+    $: console.log(name);
+
     function incrementAge() {
         age += 1;
     }
@@ -26,4 +28,4 @@
 
 <h1>Servus {uppercaseName}, my age is {age}!</h1>
 <button on:click="{incrementAge}">Change Age</button>
-<button on:click={changeName}>Change Name</button>
+<button on:click="{changeName}">Change Name</button>
