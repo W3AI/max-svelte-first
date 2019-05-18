@@ -11,6 +11,10 @@
 
     $: console.log(name);
 
+    $: if (name === 'Stefan') {
+        age = 51;
+    }
+
     function incrementAge() {
         age += 1;
     }
