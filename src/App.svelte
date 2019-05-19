@@ -23,6 +23,7 @@
       createdContacts = [
         ...createdContacts,
         { 
+            id: Math.random(),
           name: name, 
           jobTitle: title, 
           imageUrl: image, 
@@ -77,7 +78,7 @@
     <p>Please enter some data and hit the button!</p>
 {/if}
 
-{#each createdContacts as contact, i}
+{#each createdContacts as contact, i (contact.id)}
 <h2># {i + 1}</h2>
 <ContactCard 
     userName={contact.name} 
