@@ -2,8 +2,8 @@
   import ContactCard from "./ContactCard.svelte";
 
   let name = "Max";
-  let title = "";
-  let image = "";
+  let title = "lead";
+  let image = "pic";
   let description = "";
   let formState = 'empty';
 
@@ -67,7 +67,8 @@
     <p>Please enter some data and hit the button!</p>
 {/if}
 
-{#each createdContacts as contact}
+{#each createdContacts as contact, i}
+<h2># {i + 1}</h2>
 <ContactCard 
     userName={contact.name} 
     jobTitle={contact.jobTitle} 
