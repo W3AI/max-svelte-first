@@ -31,6 +31,14 @@
       formState = 'done';
   }
 
+  function deleteFirst() {
+      createdContacts = createdContacts.slice(1);
+  }
+
+  function deleteLast() {
+      createdContacts = createdContacts.slice(0, - 1);
+  }
+
 </script>
 
 <style>
@@ -60,6 +68,8 @@
 </div>
 
 <button on:click={addContact}>Add Contact Card</button>
+<button on:click={deleteFirst}>Delete First</button>
+<button on:click={deleteLast}>Delete Last</button>
 
 {#if formState === 'invalid'}
     <p>Form not complete.</p>
