@@ -7,7 +7,7 @@
   let description = "";
   let formState = 'empty';
 
-  let createdContact;
+  let createdContacts = [];
 
   function addContact() {
       if ( 
@@ -19,12 +19,15 @@
             formState = 'invalid';
             return;
       }
-      createdContact = { 
+      // Create a new array based on the old one and appending a new element 
+      createdContacts = [
+        ...createdContacts,
+        { 
           name: name, 
           jobTitle: title, 
           imageUrl: image, 
           desc: description 
-        }
+        }];
       formState = 'done';
   }
 
@@ -58,14 +61,16 @@
 
 <button on:click={addContact}>Add Contact Card</button>
 
-{#if formState === 'done'}
-<ContactCard 
-    userName={createdContact.name} 
-    jobTitle={createdContact.jobTitle} 
-    description={createdContact.desc} 
-    userImage={createdContact.imageUrl} />
-{:else if formState === 'invalid'}
+{#if formState === 'invalid'}
     <p>Form not complete.</p>
 {:else}
     <p>Please enter some data and hit the button!</p>
 {/if}
+
+{#each createdContacts as contact}
+<ContactCard 
+    userName={contact.name} 
+    jobTitle={contact.jobTitle} 
+    description={contact.desc} 
+    userImage={contact.imageUrl} />
+{/each}
