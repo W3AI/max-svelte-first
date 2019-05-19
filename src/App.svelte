@@ -52,8 +52,8 @@
 
 {#if formState === 'done'}
 <ContactCard userName={name} jobTitle={title} {description} userImage={image} />
-{/if}
-
-{#if formState === 'invalid'}
+{:else if formState === 'invalid'}
     <p>Form not complete.</p>
+{:else}
+    <p>Please enter some data and hit the button!</p>
 {/if}
