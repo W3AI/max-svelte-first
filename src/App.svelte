@@ -7,6 +7,8 @@
   let description = "";
   let formState = 'empty';
 
+  let createdContact;
+
   function addContact() {
       if ( 
           name.trim().length == 0 || 
@@ -17,6 +19,12 @@
             formState = 'invalid';
             return;
       }
+      createdContact = { 
+          name: name, 
+          jobTitle: title, 
+          imageUrl: image, 
+          desc: description 
+        }
       formState = 'done';
   }
 
@@ -51,7 +59,11 @@
 <button on:click={addContact}>Add Contact Card</button>
 
 {#if formState === 'done'}
-<ContactCard userName={name} jobTitle={title} {description} userImage={image} />
+<ContactCard 
+    userName={createdContact.name} 
+    jobTitle={createdContact.jobTitle} 
+    description={createdContact.desc} 
+    userImage={createdContact.imageUrl} />
 {:else if formState === 'invalid'}
     <p>Form not complete.</p>
 {:else}
