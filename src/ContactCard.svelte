@@ -1,9 +1,8 @@
 <script>
-    // Props
-    export let userName;
-    export let jobTitle;
-    export let description;
-    export let userImage;
+  export let userName;
+  export let jobTitle;
+  export let description;
+  export let userImage;
 </script>
 
 <style>
@@ -12,6 +11,7 @@
     max-width: 30rem;
     border-radius: 5px;
     margin: 1rem 0;
+    background: white;
   }
 
   header {
@@ -27,7 +27,7 @@
   }
 
   .thumb-placeholder {
-      background: #ccc;
+    background: #ccc;
   }
 
   img {
@@ -66,8 +66,8 @@
 
 <div class="contact-card">
   <header>
-    <div class="thumb" class:thumb-placeholder="{!userImage}" >
-      <img src="{userImage}" alt="{userName}" />
+    <div class="thumb" class:thumb-placeholder="{!userImage}">
+      <img src={userImage} alt={userName} />
     </div>
     <div class="user-data">
       <h1>{userName}</h1>
@@ -75,6 +75,6 @@
     </div>
   </header>
   <div class="description">
-    <p>{@html description}</p>
+    <p>{description}</p>
   </div>
 </div>
