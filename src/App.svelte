@@ -10,7 +10,7 @@
   let createdContacts = [];
 
   function addContact(event) {
-      event.preventDefault();
+      // event.preventDefault();
       if ( 
           name.trim().length == 0 || 
           title.trim().length == 0 || 
@@ -68,7 +68,7 @@
     <label for="desc">Description</label>
     <textarea rows="3" bind:value={description} id="desc" />
   </div>
-<button on:click={addContact} type="submit">Add Contact Card</button>
+<button on:click|preventDefault={addContact} type="submit">Add Contact Card</button>
 </form>
 
 <button on:click={deleteFirst}>Delete First</button>
