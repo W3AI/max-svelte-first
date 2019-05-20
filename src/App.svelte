@@ -68,7 +68,7 @@
   </div>
 </div>
 
-<button on:click={addContact}>Add Contact Card</button>
+<button on:click|once={addContact}>Add Contact Card</button>
 <button on:click={deleteFirst}>Delete First</button>
 <button on:click={deleteLast}>Delete Last</button>
 
